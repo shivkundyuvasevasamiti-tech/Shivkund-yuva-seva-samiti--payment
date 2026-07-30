@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHIVKUND YUVA SEVA SAMITI Registration Payment</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0b5394,#1976d2);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
+
+.card{
+background:white;
+max-width:450px;
+width:100%;
+padding:30px;
+border-radius:18px;
+box-shadow:0 20px 40px rgba(0,0,0,.25);
+text-align:center;
+}
+
+h1{
+color:#0b5394;
+margin-bottom:8px;
+}
+
+h3{
+color:#666;
+margin-bottom:20px;
+}
+
+.price{
+font-size:48px;
+color:#198754;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+.qr{
+width:240px;
+border:1px solid #ddd;
+border-radius:12px;
+margin-bottom:20px;
+}
+
+.upi{
+background:#f3f3f3;
+padding:12px;
+border-radius:8px;
+font-size:18px;
+font-weight:bold;
+margin-bottom:15px;
+word-break:break-all;
+}
+
+button{
+width:100%;
+padding:14px;
+margin-top:12px;
+border:none;
+border-radius:8px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.copy{
+background:#e9ecef;
+}
+
+.copy:hover{
+background:#d9d9d9;
+}
+
+.pay{
+background:#0b5394;
+color:white;
+}
+
+.pay:hover{
+background:#083d6e;
+}
+
+.done{
+background:#ff9800;
+color:white;
+display:none;
+}
+
+.done:hover{
+background:#f57c00;
+}
+
+.form{
+background:#28a745;
+color:white;
+display:none;
+}
+
+.form:hover{
+background:#218838;
+}
+
+.note{
+margin-top:20px;
+font-size:14px;
+color:#666;
+line-height:1.6;
+}
+
+.success{
+display:none;
+color:green;
+margin-top:10px;
+font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>SHIVKUND YUVA SEVA SAMITI</h1>
+
+<h3>15 August Examination Registration</h3>
+
+<div class="price">₹20</div>
+
+<img src="qr.png" class="qr">
+
+<div class="upi">
+princeasp504@okicici
+</div>
+
+<button class="copy" onclick="copyUPI()">
+📋 Copy UPI ID
+</button>
+
+<button class="pay" onclick="payNow()">
+💳 Pay ₹20
+</button>
+
+<button id="doneBtn" class="done" onclick="paymentDone()">
+✔ I Have Completed Payment
+</button>
+
+<button id="continueBtn" class="form"
+onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSd0VVxoD37Yq3QYdx0t7o09VUuzNlmGjbQSBSKUIPEINfnMZw/viewform'">
+
+Continue to Registration Form →
+
+</button>
+
+<div id="msg" class="success">
+UPI ID copied successfully.
+</div>
+
+<div class="note">
+
+After paying ₹20,
+
+click <b>I Have Completed Payment</b>
+
+to continue to the registration form.
+
+</div>
+
+</div>
+
+<script>
+
+function copyUPI(){
+
+navigator.clipboard.writeText("princeasp504@okicici");
+
+document.getElementById("msg").style.display="block";
+
+setTimeout(function(){
+
+document.getElementById("msg").style.display="none";
+
+},2000);
+
+}
+
+function payNow(){
+
+document.getElementById("doneBtn").style.display="block";
+
+window.location.href="upi://pay?pa=princeasp504@okicici&pn=Prince%20Kumar&am=20&cu=INR&tn=SYSS%20Registration";
+
+}
+
+function paymentDone(){
+
+document.getElementById("continueBtn").style.display="block";
+
+window.scrollTo({
+
+top:document.body.scrollHeight,
+
+behavior:"smooth"
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
