@@ -29,17 +29,22 @@ button{width:100%;padding:14px;margin-top:10px;border:0;border-radius:8px;font-s
 <div class="note">If the UPI app does not open, simply scan the QR code using any UPI app.</div>
 </div>
 <script>
-function copyUPI(){
-navigator.clipboard.writeText("princeasp504@okicici");
-msg.style.display="block";setTimeout(()=>msg.style.display="none",2000);
+function payNow() {
+
+    document.getElementById("doneBtn").style.display = "block";
+
+    if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+
+        window.location.href =
+        "upi://pay?pa=princeasp504@okicici&pn=Prince%20Kumar&cu=INR";
+
+    } else {
+
+        alert("Please scan the QR code using any UPI app.");
+
+    }
+
 }
-function payNow(){
-document.getElementById("doneBtn").style.display="block";
-if(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){
-window.location.href="upi://pay?pa=princeasp504@okicici&pn=Prince%20Kumar&am=20&cu=INR&tn=SYSS%20Registration";
-}else{
-alert("Desktop detected. Please scan the QR code with any UPI app.");
-}}
 function paymentDone(){
 document.getElementById("continueBtn").style.display="block";
 window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
