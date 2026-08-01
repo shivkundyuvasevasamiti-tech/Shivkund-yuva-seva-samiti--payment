@@ -411,8 +411,10 @@ After payment, save your <b>UTR / Transaction ID</b> carefully.<br><br>
 <button class="button done" id="doneBtn" onclick="paymentDone()">
     ✔ I Have Completed Payment
 </button>
+
+<button class="button continue" id="continueBtn"
 onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSd0VVxoD37Yq3QYdx0t7o09VUuzNlmGjbQSBSKUIPEINfnMZw/viewform'">
-Continue to Registration Form →
+    Continue to Registration Form →
 </button>
 
 <div class="footer">
@@ -451,14 +453,20 @@ function payNow(){
 
 document.getElementById("doneBtn").style.display="block";
 
-if(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){
+function payNow(){
 
-window.location.href =
-"upi://pay?pa=princeasp504@okicici&pn=Prince%20Kumar&am=20.00&cu=INR&tn=SYSS%20Registration";
+    document.getElementById("doneBtn").style.display = "block";
 
-alert("You are using a computer.\n\nPlease scan the QR Code using Google Pay, PhonePe, Paytm or any UPI app.");
+    if(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){
 
-}
+        window.location.href =
+        "upi://pay?pa=princeasp504@okicici&pn=Prince%20Kumar&am=20.00&cu=INR&tn=SYSS%20Registration";
+
+    }else{
+
+        alert("You are using a computer.\n\nPlease scan the QR Code using Google Pay, PhonePe, Paytm or any UPI app.");
+  
+    }
 
 }
 
