@@ -1,1 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Shivkund Yuva Seva Samiti | Registration Payment</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0d47a1,#1976d2,#42a5f5);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+}
+
+.container{
+width:100%;
+max-width:520px;
+}
+
+.card{
+
+background:#fff;
+
+border-radius:24px;
+
+padding:30px;
+
+box-shadow:0 25px 60px rgba(0,0,0,.25);
+
+animation:fadeUp .8s ease;
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:8px;
+
+background:linear-gradient(90deg,#0d47a1,#43a047,#ff9800);
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.header{
+
+text-align:center;
+
+margin-bottom:25px;
+
+}
+
+.header h1{
+
+font-size:28px;
+
+color:#0d47a1;
+
+font-weight:700;
+
+}
+
+.header p{
+
+margin-top:8px;
+
+color:#555;
+
+font-size:15px;
+
+}
+
+.fee{
+
+background:linear-gradient(135deg,#43a047,#66bb6a);
+
+color:#fff;
+
+border-radius:18px;
+
+padding:22px;
+
+text-align:center;
+
+margin-bottom:25px;
+
+}
+
+.fee small{
+
+font-size:16px;
+
+display:block;
+
+}
+
+.fee h2{
+
+font-size:52px;
+
+margin-top:5px;
+
+}
+
+.notice{
+
+background:#fff8e1;
+
+border-left:6px solid #ff9800;
+
+padding:18px;
+
+border-radius:10px;
+
+margin-bottom:25px;
+
+line-height:1.8;
+
+font-size:15px;
+
+color:#444;
+
+}
+
+.notice b{
+
+color:#d84315;
+
+}
+
+.qr-box{
+
+text-align:center;
+
+margin-bottom:25px;
+
+}
+
+.qr-box img{
+
+width:260px;
+
+max-width:100%;
+
+border-radius:18px;
+
+border:5px solid #f3f3f3;
+
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+.upi{
+
+background:#f5f5f5;
+
+padding:14px;
+
+border-radius:10px;
+
+margin-top:18px;
+
+font-weight:600;
+
+font-size:18px;
+
+word-break:break-all;
+
+}
+
+.button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:12px;
+
+font-size:17px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+margin-top:15px;
+
+}
+
+.button:hover{
+
+transform:translateY(-2px);
+
+}
+
+.copy{
+
+background:#eceff1;
+
+}
+
+.copy:hover{
+
+background:#dfe5e8;
+
+}
+
+.pay{
+
+background:#0d47a1;
+
+color:#fff;
+
+}
+
+.pay:hover{
+
+background:#08306b;
+
+}
+
+.done{
+
+display:none;
+
+background:#fb8c00;
+
+color:#fff;
+
+}
+
+.done:hover{
+
+background:#ef6c00;
+
+}
+
+.continue{
+
+display:none;
+
+background:#2e7d32;
+
+color:#fff;
+
+}
+
+.continue:hover{
+
+background:#1b5e20;
+
+}
+
+.success{
+
+display:none;
+
+text-align:center;
+
+margin-top:15px;
+
+color:#2e7d32;
+
+font-weight:600;
+
+}
+
+.footer{
+
+text-align:center;
+
+margin-top:25px;
+
+font-size:13px;
+
+color:#777;
+
+}
+
+@media(max-width:600px){
+
+.card{
+
+padding:22px;
+
+}
+
+.header h1{
+
+font-size:22px;
+
+}
+
+.fee h2{
+
+font-size:44px;
+
+}
+
+.qr-box img{
+
+width:220px;
+
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<div class="header">
+
+<h1>शिवकुण्ड युवा सेवा समिति</h1>
+
+<p>15 August Examination Registration 2026</p>
+
+</div>
+
+<div class="fee">
+
+<small>Registration Fee</small>
+
+<h2>₹20</h2>
+
+</div>
+
+<div class="notice">
+
+<b>⚠ IMPORTANT NOTICE</b><br><br>
+
+After payment, save your <b>UTR / Transaction ID</b> carefully.<br><br>
+
+</div>
+
+<div class="qr-box">
+
+    <img src="GooglePay_QR (1).png" alt="Google Pay QR">
+
+    <div class="upi">
+        princeasp504@okicici
+    </div>
+
+</div>
+
+<button class="button copy" onclick="copyUPI()">
+    📋 Copy UPI ID
+</button>
+
+<button class="button pay" onclick="payNow()">
+    💳 Pay ₹20 (Any UPI App)
+</button>
+
+<div class="success" id="copyMsg">
+    UPI ID copied successfully.
+</div>
+
+<button class="button done" id="doneBtn" onclick="paymentDone()">
+    ✔ I Have Completed Payment
+</button>
+onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSd0VVxoD37Yq3QYdx0t7o09VUuzNlmGjbQSBSKUIPEINfnMZw/viewform'">
+Continue to Registration Form →
+</button>
+
+<div class="footer">
+
+<b>Payment Methods Supported</b><br>
+
+Google Pay • PhonePe • Paytm • BHIM • Any UPI App
+
+<br><br>
+
+Please complete payment before filling the registration form.
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function copyUPI(){
+
+navigator.clipboard.writeText("princeasp504@okicici");
+
+document.getElementById("copyMsg").style.display="block";
+
+setTimeout(function(){
+
+document.getElementById("copyMsg").style.display="none";
+
+},2000);
+
+}
+
+function payNow(){
+
+document.getElementById("doneBtn").style.display="block";
+
+if(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){
+
+window.location.href =
+"upi://pay?pa=princeasp504@okicici&pn=Prince%20Kumar&am=20.00&cu=INR&tn=SYSS%20Registration";
+
+alert("You are using a computer.\n\nPlease scan the QR Code using Google Pay, PhonePe, Paytm or any UPI app.");
+
+}
+
+}
+
+function paymentDone(){
+
+document.getElementById("continueBtn").style.display="block";
+
+window.scrollTo({
+
+top:document.body.scrollHeight,
+
+behavior:"smooth"
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
