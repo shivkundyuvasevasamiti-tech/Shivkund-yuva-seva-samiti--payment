@@ -243,11 +243,22 @@ document.getElementById("msg").style.display="none";
 
 }
 
-function payNow(){
+function payNow() {
 
-document.getElementById("doneBtn").style.display="block";
+    document.getElementById("doneBtn").style.display = "block";
 
-window.location.href="upi://pay?pa=princeasp504@okicici&pn=Prince%20Kumar&am=20&cu=INR&tn=SYSS%20Registration";
+    var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if(isMobile){
+
+        window.location.href =
+        "upi://pay?pa=princeasp504@okicici&pn=Prince%20Kumar&am=20&cu=INR&tn=SYSS%20Registration";
+
+    }else{
+
+        alert("Please scan the QR code using Google Pay, PhonePe or any UPI app on your phone.");
+
+    }
 
 }
 
