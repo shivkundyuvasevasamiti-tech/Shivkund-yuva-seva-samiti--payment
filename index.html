@@ -21,7 +21,7 @@ button{width:100%;padding:14px;margin-top:10px;border:0;border-radius:8px;font-s
 <div class="upi">princeasp504@okicici</div>
 <button class="copy" onclick="copyUPI()">📋 Copy UPI ID</button>
 <p><img src="pngtree-google-pay-icon-vector-png-image_12256720.png" height="34">
-<img src="phonepe-icon.png" height="34"></p>
+<img src="gpay-qr.png" class="qr">
 <button class="pay" onclick="payNow()">💰 Pay ₹20 via UPI</button>
 <button id="doneBtn" class="done" onclick="paymentDone()">✔ I Have Completed Payment</button>
 <button id="continueBtn" class="form" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSd0VVxoD37Yq3QYdx0t7o09VUuzNlmGjbQSBSKUIPEINfnMZw/viewform'">Continue to Registration Form →</button>
@@ -31,12 +31,15 @@ button{width:100%;padding:14px;margin-top:10px;border:0;border-radius:8px;font-s
 <script>
 function payNow() {
 
+    // Show the "I Have Completed Payment" button
     document.getElementById("doneBtn").style.display = "block";
 
     if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
 
-        window.location.href =
-        "upi://pay?pa=princeasp504@okicici&pn=Prince%20Kumar&cu=INR";
+        const upiLink =
+        "upi://pay?pa=princeasp504@okicici&pn=Prince%20Kumar&am=20.00&cu=INR&aid=uGICAgMCQ7PTOAw";
+
+        window.location.href = upiLink;
 
     } else {
 
@@ -44,6 +47,7 @@ function payNow() {
 
     }
 
+}
 }
 function paymentDone(){
 document.getElementById("continueBtn").style.display="block";
