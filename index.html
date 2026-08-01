@@ -1,260 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>शिवकुण्ड युवा सेवा समिति  Registration Payment</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
-
-body{
-background:linear-gradient(135deg,#0b5394,#1976d2);
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-padding:20px;
-}
-
-.card{
-background:white;
-max-width:450px;
-width:100%;
-padding:30px;
-border-radius:18px;
-box-shadow:0 20px 40px rgba(0,0,0,.25);
-text-align:center;
-}
-
-h1{
-color:#0b5394;
-margin-bottom:8px;
-}
-
-h3{
-color:#666;
-margin-bottom:20px;
-}
-
-.price{
-font-size:48px;
-color:#198754;
-font-weight:bold;
-margin-bottom:20px;
-}
-
-.qr{
-width:240px;
-border:1px solid #ddd;
-border-radius:12px;
-margin-bottom:20px;
-}
-
-.upi{
-background:#f3f3f3;
-padding:12px;
-border-radius:8px;
-font-size:18px;
-font-weight:bold;
-margin-bottom:15px;
-word-break:break-all;
-}
-
-button{
-width:100%;
-padding:14px;
-margin-top:12px;
-border:none;
-border-radius:8px;
-font-size:16px;
-font-weight:bold;
-cursor:pointer;
-transition:.3s;
-}
-
-.copy{
-background:#e9ecef;
-}
-
-.copy:hover{
-background:#d9d9d9;
-}
-
-.pay{
-background:#0b5394;
-color:white;
-}
-
-.pay:hover{
-background:#083d6e;
-}
-
-.done{
-background:#ff9800;
-color:white;
-display:none;
-}
-
-.done:hover{
-background:#f57c00;
-}
-
-.form{
-background:#28a745;
-color:white;
-display:none;
-}
-
-.form:hover{
-background:#218838;
-}
-
-.note{
-margin-top:20px;
-font-size:14px;
-color:#666;
-line-height:1.6;
-}
-
-.success{
-display:none;
-color:green;
-margin-top:10px;
-font-weight:bold;
-}
-</style>
-
-</head>
-
-<body>
-
-<div class="card">
-
-<h1>शिवकुण्ड युवा सेवा समिति आपका स्वागत करती है </h1>
-
-<h3>15 August Examination Registration</h3>
-<div class="important-note">
-
-<b style="font-size:20px;color:#d35400;">
-⚠️ महत्वपूर्ण सूचना
-</b>
-
-<br><br>
-
-भुगतान करने के बाद अपना <b>Transaction ID (UTR Number)</b> सुरक्षित रखें।
-
-<br><br>
-
-अंतिम पंजीकरण फॉर्म में <b>UTR Number दर्ज करना अनिवार्य होगा।</b>
-
-<br><br>
-
-<b style="color:#c0392b;">
-बिना UTR Number के आपका पंजीकरण स्वीकार नहीं किया जाएगा।
-</b>
-
-</div>
-<div class="price">₹20</div>
-
-<img src="qr.png" class="qr" width="350">
-
-<div class="upi">
-
-princeasp504@okicici
-</div>
-
-<button class="copy" onclick="copyUPI()">
-📋 Copy UPI ID
-</button>
-<div style="text-align:center; margin:20px 0;">
-<div style="margin-bottom:10px; display:flex; justify-content:center; align-items:center; gap:15px;">
-    <img src="pngtree-google-pay-icon-vector-png-image_12256720.png" alt="Google Pay" height="35">
-    <img src="phonepe-icon.png" alt="PhonePe" height="35">
-</div>
-
-<p style="font-size:16px; font-weight:600; color:#333;">
-    Google Pay / PhonePe द्वारा ₹20 पंजीकरण शुल्क जमा करें
-</p>
-
-<a href="javascript:void(0);" onclick="payNow()"
-   style="display:inline-block;
-          background:#0f9d58;
-          color:white;
-          padding:12px 20px;
-          text-decoration:none;
-          border-radius:8px;
-          font-size:16px;
-          font-weight:bold;
-          margin-top:10px;">
-   💰 Pay ₹20 via Google Pay / PhonePe
-</a>
-
-<p style="font-size:13px; color:#666; margin-top:8px;">
-    GPay • PhonePe • Paytm • Any UPI App
-</p>
-</div>
-
-<button id="doneBtn" class="done" onclick="paymentDone()">
-✔ I Have Completed Payment
-</button>
-
-<button id="continueBtn" class="form"
-onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSd0VVxoD37Yq3QYdx0t7o09VUuzNlmGjbQSBSKUIPEINfnMZw/viewform'">
-
-Continue to Registration Form →
-
-</button>
-
-<div id="msg" class="success">
-UPI ID copied successfully.
-</div>
-
-<div class="note">
-
-After paying ₹20,
-
-click <b>I Have Completed Payment</b>
-
-to continue to the registration form.
-
-</div>
-
-</div>
-
 <script>
 
-function copyUPI(){
+function copyUPI() {
 
-navigator.clipboard.writeText("princeasp504@okicici");
+    navigator.clipboard.writeText("princeasp504@okicici");
 
-document.getElementById("msg").style.display="block";
+    document.getElementById("msg").style.display = "block";
 
-setTimeout(function(){
-
-document.getElementById("msg").style.display="none";
-
-},2000);
+    setTimeout(function () {
+        document.getElementById("msg").style.display = "none";
+    }, 2000);
 
 }
 
 function payNow() {
 
+    // Show "I Have Completed Payment" button
     document.getElementById("doneBtn").style.display = "block";
 
     var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-    if(isMobile){
+    if (isMobile) {
 
         window.location.href =
         "upi://pay?pa=princeasp504@okicici&pn=Prince%20Kumar&am=20&cu=INR&tn=SYSS%20Registration";
 
-    }else{
+    } else {
 
         alert("Please scan the QR code using Google Pay, PhonePe or any UPI app on your phone.");
 
@@ -262,23 +32,15 @@ function payNow() {
 
 }
 
-}
+function paymentDone() {
 
-function paymentDone(){
+    document.getElementById("continueBtn").style.display = "block";
 
-document.getElementById("continueBtn").style.display="block";
-
-window.scrollTo({
-
-top:document.body.scrollHeight,
-
-behavior:"smooth"
-
-});
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
 
 }
 
 </script>
-
-</body>
-</html>
