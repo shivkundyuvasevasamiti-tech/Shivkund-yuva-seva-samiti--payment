@@ -18,337 +18,199 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0d47a1,#1976d2,#42a5f5);
+background:linear-gradient(135deg,#ffcc80,#fff8e1);
 min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:30px;
+padding:20px;
 }
 
 .container{
-width:100%;
 max-width:520px;
+margin:auto;
 }
 
 .card{
-
-background:#fff;
-
-border-radius:24px;
-
-padding:30px;
-
-box-shadow:0 25px 60px rgba(0,0,0,.25);
-
-animation:fadeUp .8s ease;
-
+background:#ffffff;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.15);
 overflow:hidden;
-
-position:relative;
-
+animation:fade .8s ease;
 }
 
-.card::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:8px;
-
-background:linear-gradient(90deg,#0d47a1,#43a047,#ff9800);
-
-}
-
-@keyframes fadeUp{
-
+@keyframes fade{
 from{
-
 opacity:0;
-
-transform:translateY(40px);
-
+transform:translateY(30px);
 }
-
 to{
-
 opacity:1;
-
 transform:translateY(0);
-
 }
-
 }
 
 .header{
-
+background:linear-gradient(135deg,#ef6c00,#ff9800);
+color:#fff;
+padding:30px 20px;
 text-align:center;
-
-margin-bottom:25px;
-
 }
 
 .header h1{
-
-font-size:28px;
-
-color:#0d47a1;
-
-font-weight:700;
-
+font-size:30px;
+margin-bottom:8px;
 }
 
-.header p{
+.header h2{
+font-size:20px;
+font-weight:500;
+}
 
-margin-top:8px;
+.welcome{
+background:#fff3e0;
+padding:18px;
+text-align:center;
+font-size:18px;
+font-weight:600;
+color:#e65100;
+line-height:1.6;
+}
 
-color:#555;
+.apps{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+padding:15px;
+}
 
-font-size:15px;
-
+.apps img{
+height:48px;
 }
 
 .fee{
-
-background:linear-gradient(135deg,#43a047,#66bb6a);
-
+margin:20px;
+background:#2e7d32;
 color:#fff;
-
-border-radius:18px;
-
-padding:22px;
-
 text-align:center;
-
-margin-bottom:25px;
-
+padding:15px;
+border-radius:15px;
 }
 
 .fee small{
-
-font-size:16px;
-
 display:block;
-
+font-size:16px;
 }
 
-.fee h2{
-
-font-size:52px;
-
+.fee h3{
+font-size:42px;
 margin-top:5px;
-
 }
 
 .notice{
-
+margin:20px;
 background:#fff8e1;
-
-border-left:6px solid #ff9800;
-
+border-left:6px solid #ef6c00;
 padding:18px;
-
-border-radius:10px;
-
-margin-bottom:25px;
-
-line-height:1.8;
-
+border-radius:12px;
+line-height:1.9;
 font-size:15px;
-
 color:#444;
-
 }
 
-.notice b{
-
+.notice h3{
 color:#d84315;
-
-}
-
-.qr-box{
-
+margin-bottom:10px;
 text-align:center;
-
-margin-bottom:25px;
-
 }
 
-.qr-box img{
+.qr{
+text-align:center;
+padding:10px 20px 20px;
+}
 
-width:260px;
-
+.qr img{
+width:280px;
 max-width:100%;
-
-border-radius:18px;
-
-border:5px solid #f3f3f3;
-
-box-shadow:0 10px 25px rgba(0,0,0,.12);
-
+border-radius:15px;
+border:6px solid #eeeeee;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 .upi{
-
+margin-top:15px;
 background:#f5f5f5;
-
-padding:14px;
-
+padding:12px;
 border-radius:10px;
-
-margin-top:18px;
-
-font-weight:600;
-
 font-size:18px;
-
+font-weight:600;
 word-break:break-all;
-
 }
 
 .button{
-
-width:100%;
-
+width:90%;
+margin:15px auto;
+display:block;
 padding:15px;
-
 border:none;
-
 border-radius:12px;
-
 font-size:17px;
-
 font-weight:600;
-
 cursor:pointer;
-
 transition:.3s;
-
-margin-top:15px;
-
 }
 
 .button:hover{
-
 transform:translateY(-2px);
-
 }
 
 .copy{
-
 background:#eceff1;
-
-}
-
-.copy:hover{
-
-background:#dfe5e8;
-
-}
-
-.pay{
-
-background:#0d47a1;
-
-color:#fff;
-
-}
-
-.pay:hover{
-
-background:#08306b;
-
 }
 
 .done{
-
-display:none;
-
-background:#fb8c00;
-
+background:#2e7d32;
 color:#fff;
-
-}
-
-.done:hover{
-
-background:#ef6c00;
-
+display:block;
 }
 
 .continue{
-
-display:none;
-
-background:#2e7d32;
-
+background:#ef6c00;
 color:#fff;
-
-}
-
-.continue:hover{
-
-background:#1b5e20;
-
-}
-
-.success{
-
 display:none;
-
-text-align:center;
-
-margin-top:15px;
-
-color:#2e7d32;
-
-font-weight:600;
-
 }
 
 .footer{
-
+padding:25px;
 text-align:center;
+font-size:14px;
+color:#666;
+line-height:1.8;
+background:#fafafa;
+}
 
-margin-top:25px;
-
-font-size:13px;
-
-color:#777;
-
+.success{
+display:none;
+text-align:center;
+color:#2e7d32;
+font-weight:600;
+margin-top:10px;
 }
 
 @media(max-width:600px){
 
-.card{
-
-padding:22px;
-
-}
-
 .header h1{
-
-font-size:22px;
-
+font-size:25px;
 }
 
-.fee h2{
-
-font-size:44px;
-
+.header h2{
+font-size:17px;
 }
 
-.qr-box img{
+.fee h3{
+font-size:36px;
+}
 
-width:220px;
-
+.apps img{
+height:40px;
 }
 
 }
@@ -366,7 +228,21 @@ width:220px;
 
 <h1>शिवकुण्ड युवा सेवा समिति</h1>
 
-<p>15 August Examination Registration 2026</p>
+<h2>15 अगस्त परीक्षा 2026</h2>
+
+</div>
+
+<div class="welcome">
+
+🌸 शिवकुण्ड युवा सेवा समिति आपका स्वागत करती है 🌸
+
+</div>
+
+<div class="apps">
+
+<img src="gpay.png" alt="Google Pay">
+
+<img src="phonepe.png" alt="PhonePe">
 
 </div>
 
@@ -374,93 +250,99 @@ width:220px;
 
 <small>Registration Fee</small>
 
-<h2>₹20</h2>
+<h3>₹20</h3>
 
 </div>
 
 <div class="notice">
 
-<b>⚠ IMPORTANT NOTICE</b><br><br>
+<h3>📢 महत्वपूर्ण सूचना</h3>
 
-After payment, save your <b>UTR / Transaction ID</b> carefully.<br><br>
+⚠️ QR Code को स्कैन करके ही भुगतान करें।<br><br>
 
-</div>
+⚠️ Google Pay, PhonePe, Paytm या किसी भी UPI App से भुगतान करें।<br><br>
 
-<div class="qr-box">
-
-    <img src="GooglePay_QR (1).png" alt="Google Pay QR">
-
-    <div class="upi">
-        princeasp504@okicici
-    </div>
+⚠️ भुगतान के बाद प्राप्त 12 अंकों का Transaction ID (UTR Number) फॉर्म भरते समय अवश्य दर्ज करें।
 
 </div>
 
+<div class="qr">
+
+<img src="GooglePay_QR (1).png" alt="QR Code">
+
+<div class="upi">
+
+princeasp504@okicici
+
+</div>
 <button class="button copy" onclick="copyUPI()">
-    📋 Copy UPI ID
-</button>
-
-<button class="button pay" onclick="payNow()">
-    💳 Pay ₹20 (Any UPI App)
+📋 Copy UPI ID
 </button>
 
 <div class="success" id="copyMsg">
-    UPI ID copied successfully.
+UPI ID copied successfully.
 </div>
 
-<button class="button done" id="doneBtn" onclick="paymentDone()">
-    ✔ I Have Completed Payment
+<button class="button done" onclick="paymentDone()">
+✅ मैंने भुगतान कर दिया है
 </button>
 
 <button class="button continue" id="continueBtn"
 onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSd0VVxoD37Yq3QYdx0t7o09VUuzNlmGjbQSBSKUIPEINfnMZw/viewform'">
-    Continue to Registration Form →
+📝 Continue to Registration Form
 </button>
 
 <div class="footer">
 
-<b>Payment Methods Supported</b><br>
+<b>Payment Accepted Through</b><br><br>
 
 Google Pay • PhonePe • Paytm • BHIM • Any UPI App
 
 <br><br>
 
-Please complete payment before filling the registration form.
+🙏 धन्यवाद।<br>
+
+शिवकुण्ड युवा सेवा समिति की परीक्षा में भाग लेने हेतु आपका हार्दिक स्वागत है।
+
+<br><br>
+
+<small>
+After payment, please enter your 12-digit UTR / Transaction ID carefully while filling the registration form.
+</small>
 
 </div>
 
 </div>
 
 </div>
-
 <script>
 
 function copyUPI(){
 
-    navigator.clipboard.writeText("princeasp504@okicici");
+navigator.clipboard.writeText("princeasp504@okicici");
 
-    document.getElementById("copyMsg").style.display="block";
+document.getElementById("copyMsg").style.display="block";
 
-    setTimeout(function(){
+setTimeout(function(){
 
-        document.getElementById("copyMsg").style.display="none";
+document.getElementById("copyMsg").style.display="none";
 
-    },2000);
+},2000);
 
-}
-
-function payNow() {
-    window.location.href = "upi://pay?pa=princeasp504@okicici";
 }
 
 function paymentDone(){
 
-    window.location.href =
-    "https://docs.google.com/forms/d/e/1FAIpQLSd0VVxoD37Yq3QYdx0t7o09VUuzNlmGjbQSBSKUIPEINfnMZw/viewform";
+document.getElementById("continueBtn").style.display="block";
+
+document.getElementById("continueBtn").scrollIntoView({
+
+behavior:"smooth"
+
+});
 
 }
 
 </script>
-
 </body>
 </html>
