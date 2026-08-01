@@ -1,46 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SYSS Registration Payment</title>
+<style>
+*{box-sizing:border-box;font-family:Arial,sans-serif}body{margin:0;background:linear-gradient(135deg,#0b5394,#1976d2);display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px}
+.card{background:#fff;max-width:460px;width:100%;padding:28px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.25);text-align:center}
+.price{font-size:48px;color:#198754;font-weight:bold}.qr{width:260px;max-width:100%;border:1px solid #ddd;border-radius:10px}
+.upi{background:#f3f3f3;padding:10px;border-radius:8px;font-weight:bold;word-break:break-all;margin:15px 0}
+button{width:100%;padding:14px;margin-top:10px;border:0;border-radius:8px;font-size:16px;font-weight:bold;cursor:pointer}
+.copy{background:#e9ecef}.pay{background:#0f9d58;color:#fff}.done{background:#ff9800;color:#fff;display:none}.form{background:#28a745;color:#fff;display:none}
+#msg{display:none;color:green;margin-top:10px}
+.note{font-size:14px;color:#555;margin-top:15px;line-height:1.5}
+</style></head><body>
+<div class="card">
+<h2>शिवकुण्ड युवा सेवा समिति</h2>
+<h3>15 August Examination Registration</h3>
+<p><b style="color:#d35400">⚠️ महत्वपूर्ण सूचना</b><br><br>
+भुगतान के बाद अपना <b>UTR Number</b> सुरक्षित रखें। अंतिम फॉर्म में इसे दर्ज करना अनिवार्य है।</p>
+<div class="price">₹20</div>
+<img src="qr.png" class="qr" alt="QR">
+<div class="upi">princeasp504@okicici</div>
+<button class="copy" onclick="copyUPI()">📋 Copy UPI ID</button>
+<p><img src="pngtree-google-pay-icon-vector-png-image_12256720.png" height="34">
+<img src="phonepe-icon.png" height="34"></p>
+<button class="pay" onclick="payNow()">💰 Pay ₹20 via UPI</button>
+<button id="doneBtn" class="done" onclick="paymentDone()">✔ I Have Completed Payment</button>
+<button id="continueBtn" class="form" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSd0VVxoD37Yq3QYdx0t7o09VUuzNlmGjbQSBSKUIPEINfnMZw/viewform'">Continue to Registration Form →</button>
+<div id="msg">UPI ID copied successfully.</div>
+<div class="note">If the UPI app does not open, simply scan the QR code using any UPI app.</div>
+</div>
 <script>
-
-function copyUPI() {
-
-    navigator.clipboard.writeText("princeasp504@okicici");
-
-    document.getElementById("msg").style.display = "block";
-
-    setTimeout(function () {
-        document.getElementById("msg").style.display = "none";
-    }, 2000);
-
+function copyUPI(){
+navigator.clipboard.writeText("princeasp504@okicici");
+msg.style.display="block";setTimeout(()=>msg.style.display="none",2000);
 }
-
-function payNow() {
-
-    // Show "I Have Completed Payment" button
-    document.getElementById("doneBtn").style.display = "block";
-
-    var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-    if (isMobile) {
-
-        window.location.href =
-        "upi://pay?pa=princeasp504@okicici&pn=Prince%20Kumar&am=20&cu=INR&tn=SYSS%20Registration";
-
-    } else {
-
-        alert("Please scan the QR code using Google Pay, PhonePe or any UPI app on your phone.");
-
-    }
-
+function payNow(){
+document.getElementById("doneBtn").style.display="block";
+if(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){
+window.location.href="upi://pay?pa=princeasp504@okicici&pn=Prince%20Kumar&am=20&cu=INR&tn=SYSS%20Registration";
+}else{
+alert("Desktop detected. Please scan the QR code with any UPI app.");
+}}
+function paymentDone(){
+document.getElementById("continueBtn").style.display="block";
+window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
 }
-
-function paymentDone() {
-
-    document.getElementById("continueBtn").style.display = "block";
-
-    window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth"
-    });
-
-}
-
-</script>
+</script></body></html>
