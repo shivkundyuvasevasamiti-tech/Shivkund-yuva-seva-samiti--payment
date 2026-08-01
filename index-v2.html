@@ -437,21 +437,17 @@ Please complete payment before filling the registration form.
 
 function copyUPI(){
 
-navigator.clipboard.writeText("princeasp504@okicici");
+    navigator.clipboard.writeText("princeasp504@okicici");
 
-document.getElementById("copyMsg").style.display="block";
+    document.getElementById("copyMsg").style.display="block";
 
-setTimeout(function(){
+    setTimeout(function(){
 
-document.getElementById("copyMsg").style.display="none";
+        document.getElementById("copyMsg").style.display="none";
 
-},2000);
+    },2000);
 
 }
-
-function payNow(){
-
-document.getElementById("doneBtn").style.display="block";
 
 function payNow(){
 
@@ -465,22 +461,22 @@ function payNow(){
     }else{
 
         alert("You are using a computer.\n\nPlease scan the QR Code using Google Pay, PhonePe, Paytm or any UPI app.");
-  
+
     }
 
 }
 
 function paymentDone(){
 
-document.getElementById("continueBtn").style.display="block";
+    document.getElementById("continueBtn").style.display = "block";
 
-window.scrollTo({
+    window.scrollTo({
 
-top:document.body.scrollHeight,
+        top: document.body.scrollHeight,
 
-behavior:"smooth"
+        behavior: "smooth"
 
-});
+    });
 
 }
 
